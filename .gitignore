@@ -1,0 +1,28 @@
+# Public repository: only the core code and its configuration are tracked.
+#
+# Everything else stays on the author's machine only: assistant notes, prompts
+# and logs, planning documents, the report sources and PDFs, run outputs, virtual
+# environments, caches and archives.
+#
+# This file is an allow-list. Every top-level entry is ignored, then the entries
+# below are re-included. New files under src/, scripts/ and tests/ are picked up
+# automatically; anything else at the top level must be listed here to be tracked.
+/*
+
+!/.gitignore
+!/README.md
+!/pyproject.toml
+!/uv.lock
+!/requirements.txt
+!/src/
+!/scripts/
+!/tests/
+
+# Never track debris, even inside the allowed directories.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+*.icloud
+.env
+.env.*
